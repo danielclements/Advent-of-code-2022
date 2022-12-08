@@ -30,10 +30,17 @@ public class Day3Part2 {
             counter++;
 
             if (counter == 3) {
-                // compare 3 list items for common character
-                // add to total sum
 
+                for (char c : elfGroup.get(0).toCharArray()) {
+                   if(elfGroup.get(1).contains(String.valueOf(c)) && elfGroup.get(2).contains(String.valueOf(c))) {
+                       totalSum += alphabet.indexOf(c) + 1;
+                       counter = 0;
+                       elfGroup = new ArrayList<>();
+                       break;
+                   };
+                }
             }
+
         }
 
         System.out.println(totalSum);

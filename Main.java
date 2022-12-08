@@ -5,7 +5,7 @@ import day3.Day3Part2;
 
 public class Main {
     public static void main(String[] args) {
-        ElfCalc.run();
+        day3.Day3Part2.run();
     }
 
    
